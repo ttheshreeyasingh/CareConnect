@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><Response>
+  <Speak>This is Plivo</Speak>
+  <Play>https://s3.amazonaws.com/plivocloud/Trumpet.mp3</Play>
+</Response>

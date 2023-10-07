@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <GetInput
+    inputType="speech"
+    action="https://c9d6-106-221-176-87.ngrok.io/handle_speech"
+    method="POST"
+    speechModel="default"
+    hints="symptoms,condition, fever, body pain, headache, cough, cold, sore throat, runny nose, sneezing, fatigue, nausea, vomiting, diarrhea, abdominal pain, chest pain, shortness of breath, dizziness, fainting, back pain, joint pain, muscle pain"
+    language="en-IN"
+    speechEndTimeout="2"
+  >
+    <Speak language = "en-US">
+    Hello! I'm your personal health assistant from careconnect. Please share the symptoms you're experiencing, and I'll do my best to help you.
+    </Speak>
+  </GetInput>
+  
+</Response>

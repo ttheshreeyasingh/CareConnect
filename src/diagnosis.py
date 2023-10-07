@@ -12,8 +12,8 @@ API_URL_DIAGNOSTIC = "https://api-inference.huggingface.co/models/abhirajeshbhai
 
 
 #Disease prediction model
-def diagnostic_medic(voice_text):
-
+def diagnosis_medic(voice_text):
+    print(f"the input is {voice_text}")
     """
     INPUT: PATIENT'S SYMPTOMPS IN A TEXT FORMAT
     
@@ -43,5 +43,9 @@ def diagnostic_medic(voice_text):
         except KeyError:
 
             continue
-
+    print(final_output)
     return final_output
+
+# print(diagnosis_medic("I am having fever and headache"),"\n")
+# print(diagnosis_medic("i am having headache and nausea. i am also pregnant."),"\n")
+# print(diagnosis_medic("I am having heart ache"),"\n")
