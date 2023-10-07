@@ -1,4 +1,11 @@
 import plivo
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+# Access the variables
+auth_id = os.getenv("auth_id")
+auth_token = os.getenv("auth_token")
 
 client = plivo.RestClient(auth_id, auth_token)
 
