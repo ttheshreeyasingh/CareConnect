@@ -13,7 +13,12 @@ CORS(app)
 # Access the variables from dotenv file
 auth_id = os.getenv("auth_id")
 auth_token = os.getenv("auth_token")
+ngrok_url = os.getenv("ngrok_url")
 client = plivo.RestClient(auth_id, auth_token)
+
+@app.route('/')
+def index():
+    return "Welcome to CareConnect"
 
 @app.route('/handle_speech', methods=['POST'])
 def handle_speech():
@@ -53,20 +58,23 @@ def answer_call():
     
     return response
 
-
 @app.route('/make_call', methods=['POST'])
 def make_outbound_call():
     phone_number = request.json.get('phone_number')
 
-    # Making an Outbound call
+     # Making an Outbound call
     response = client.calls.create(
         from_='441392342326',
         to_=phone_number,
-        answer_url='https://a77b-106-221-188-133.ngrok.io/answer',
+        answer_url=ngrok_url+'/answer',
         answer_method='POST'
     )
+    print(response)
 
-    return str(response)
+
+    return {
+        'message': 'Call has been made'
+    }
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

@@ -61,7 +61,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="136" height="46" alt="CareConnect home">
+        <img src="./assets/images/logo.svg" width="50" height="50" alt="CareConnect home">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -69,7 +69,7 @@
         <div class="navbar-top">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" alt="CareConnect home">
+            <img src="./assets/images/logo.svg" alt="CareConnect home" height="10" width="10">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -84,10 +84,10 @@
             <a href="#" class="navbar-link title-md">Home</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">About</a>
+            <a href="#about" class="navbar-link title-md">About</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Contact</a>
+            <a href="#contact" class="navbar-link title-md">Contact</a>
           </li>
         </ul>
 
@@ -142,56 +142,63 @@
             <p class="hero-subtitle has-before" data-reveal="left">Welcome To CareConnect</p>
 
             <h2 class="headline-lg hero-title" data-reveal="left">
-              Get Diagnosed <br>
-              Instantly.
+              Get Diagnosed Instantly.
             </h2>
 
             <div class="hero-card" data-reveal="left">
               <p class="title-lg card-text">Login</p>
-            
+
               <!-- Name Input -->
               <div class="input-wrapper title-lg">
                 <input type="text" name="name" placeholder="Your Name" class="input-field">
                 <ion-icon name="person"></ion-icon>
               </div>
-            
+
               <!-- Country Code and Phone Number in the same row -->
               <div class="input-wrapper title-lg">
                 <!-- Country Code Select -->
                 <select name="country_code" class="input-field" style="width: 30%;">
-                  <option value="1">+1</option>
-                  <option value="44">+44</option>
                   <option value="91">+91</option>
+                  <option value="44">+44</option>
+                  <option value="1">+1</option>
                   <!-- Add more options as needed -->
                 </select>
-            
+
                 <!-- Phone Number Input -->
-                <input type="tel" name="phone_number" placeholder="Phone Number" class="input-field" pattern="[0-9]{10}" style="width: 70%;">
+                <input type="tel" name="phone_number" placeholder="Phone Number" class="input-field" pattern="[0-9]{10}"
+                  style="width: 70%;">
                 <ion-icon name="call"></ion-icon>
               </div>
-            
+
+             
               <!-- Start Call Button -->
               <button class="btn has-before start-call-button">
                 <ion-icon name="call"></ion-icon>
                 <span class="span title-md">Start Call</span>
               </button>
+              <!-- <button class="btn has-before start-call-button" onclick="startCall()">
+                <ion-icon name="call"></ion-icon>
+                <span class="span title-md">Start Call</span>
+              </button> -->
+              
             </div>
-            
-          
-<!-- 
+
+
+
+              <!-- 
           <figure class="hero-banner" data-reveal="right">
             <img src="./assets/images/hero-banner.png" width="600" height="537" loading="eager" alt="hero banner"
               class="w-100">
           </figure> -->
 
-        </div>
+            </div>
       </section>
 
       <!-- 
         - #ABOUT
       -->
 
-      <section class="section about" aria-labelledby="about-label">
+      <section id="about" class="section about" aria-labelledby="about-label">
         <div class="container">
 
           <div class="about-content">
@@ -201,15 +208,16 @@
             <h2 class="headline-md" data-reveal="left">Your Health, Our Priority</h2>
 
             <p class="section-text" data-reveal="left">
-              At CareConnect, we believe in making healthcare accessible, personalized, and convenient. Our AI-based health assistant is here to assist you in understanding 
-              your symptoms and providing initial guidance. 
+              At CareConnect, we believe in making healthcare accessible, personalized, and convenient. Our AI-based
+              health assistant is here to assist you in understanding
+              your symptoms and providing initial guidance.
             </p>
 
             <h4 class="headline-md" data-reveal="left">Our Mission</h4>
 
             <p class="section-text" data-reveal="left">
               To empower individuals with easy access to healthcare
-               information and guidance through cutting-edge technology and compassionate care.
+              information and guidance through cutting-edge technology and compassionate care.
             </p>
 
             <div class="wrapper">
@@ -246,161 +254,151 @@
 
           </div>
 
-          <figure class="about-banner" data-reveal="left">
-            <img src="./assets/images/about-banner.png" width="300" height="300" loading="lazy" alt="about banner" align-items = "left"
-              >
-          </figure>
-
         </div>
       </section>
 
-  <!-- 
+      <!-- 
     - #FOOTER
   -->
+      <section id="contact" class="section contact" aria-labelledby="contact-label">
+        <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+          <div class="container">
 
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
-    <div class="container">
+            <div class="section footer-top">
 
-      <div class="section footer-top">
+              <div class="footer-brand" data-reveal="bottom">
 
-        <div class="footer-brand" data-reveal="bottom">
+                <a href="#" class="logo">
+                  <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="CareConnect home">
+                </a>
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="CareConnect home">
-          </a>
+                <ul class="contact-list has-after">
 
-          <ul class="contact-list has-after">
+                  <li class="contact-item">
 
-            <li class="contact-item">
+                    <div class="item-icon">
+                      <ion-icon name="mail-open-outline"></ion-icon>
+                    </div>
 
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
+                    <div>
+                      <p>
+                        Main Email : <a href="mailto:contact@website.com"
+                          class="contact-link">shreeya.singh@students.iiit.ac.in</a>
+                      </p>
+
+                      <p>
+                        Secondary Email : <a href="mailto:Info@mail.com"
+                          class="contact-link">singhshreeya29@gmail.com</a>
+                      </p>
+                    </div>
+
+                  </li>
+
+                  <li class="contact-item">
+
+                    <div class="item-icon">
+                      <ion-icon name="call-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                      <p>
+                        Mobile : <a href="tel:0029129102320" class="contact-link">+91-8978843640</a>
+                      </p>
+                    </div>
+
+                  </li>
+
+                </ul>
+
               </div>
 
-              <div>
-                <p>
-                  Main Email : <a href="mailto:contact@website.com" class="contact-link">shreeya.singh@students.iiit.ac.in</a>
+              <div class="footer-list" data-reveal="bottom">
+
+                <p class="headline-sm footer-list-title">About Us</p>
+
+                <p class="text">
+                  easy access to healthcare and guidance
                 </p>
 
-                <p>
-                  Secondary Email  : <a href="mailto:Info@mail.com" class="contact-link">singhshreeya29@gmail.com</a>
-                </p>
+                <address class="address">
+                  <ion-icon name="map-outline"></ion-icon>
+
+                  <span class="text">
+                    IIIT Hyderabad <br>
+                    Telangana
+                  </span>
+                </address>
+
               </div>
 
-            </li>
-
-            <li class="contact-item">
-
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-              <div>
-                <p>
-                  Mobile : <a href="tel:0029129102320" class="contact-link">+91-8978843640</a>
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </div>
-
-        <div class="footer-list" data-reveal="bottom">
-
-          <p class="headline-sm footer-list-title">About Us</p>
-
-          <p class="text">
-            easy access to healthcare and guidance
-          </p>
-
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-
-            <span class="text">
-              IIIT Hyderabad <br>
-              Telangana
-            </span>
-          </address>
-
-        </div>
 
 
+            </div>
 
-      </div>
+            <div class="footer-bottom">
 
-      <div class="footer-bottom">
+              <p class="text copyright">
+                &copy; CareConnect | Shreeya Singh
+              </p>
 
-        <p class="text copyright">
-          &copy; CareConnect | Shreeya Singh
-        </p>
+              <ul class="social-list">
 
-        <ul class="social-list">
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-google"></ion-icon>
+                  </a>
+                </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                  </a>
+                </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
+              </ul>
 
-        </ul>
+            </div>
 
-      </div>
+          </div>
+        </footer>
+      </section>
 
-    </div>
-  </footer>
-
-
-
-
-
-  <!-- 
+      <!-- 
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
-  </a>
+      <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up"></ion-icon>
+      </a>
 
-
-
-
-
-  <!-- 
+      <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
 
-  <!-- 
+      <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

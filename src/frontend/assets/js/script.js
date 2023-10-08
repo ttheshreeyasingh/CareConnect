@@ -91,32 +91,74 @@ window.addEventListener("scroll", revealElementOnScroll);
 
 window.addEventListener("load", revealElementOnScroll);
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
   const startCallButton = document.querySelector('.start-call-button');
-  
-  startCallButton.addEventListener('click', function() {
+
+  startCallButton.addEventListener('click', async function() {
+    try {
       const name = document.querySelector('[name="name"]').value;
       const countryCode = document.querySelector('[name="country_code"]').value;
       const phoneNumber = document.querySelector('[name="phone_number"]').value;
 
       const phoneNumberWithCode = `+${countryCode}${phoneNumber}`;
-      
+
       const requestData = {
-          name: name,
-          phone_number: phoneNumberWithCode
+        name: name,
+        phone_number: phoneNumberWithCode
       };
 
-      fetch('http://172.20.10.2:5000/make_call', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(requestData)
-      })
-      .then(response => response.json())
-      .then(data => {
-          console.log(data); // You can handle the response here
-      })
-      .catch(error => console.error('Error:', error));
+      const response = await fetch('http://172.20.10.2:5000/make_call', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data); // You can handle the response here
+        window.location.href = 'call.html'; // Navigate to call.html
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch(error) {
+      console.error('Error:', error);
+    }
   });
 });
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const startCallButton = document.querySelector('.start-call-button');
+  
+//   startCallButton.addEventListener('click', function() {
+//       const name = document.querySelector('[name="name"]').value;
+//       const countryCode = document.querySelector('[name="country_code"]').value;
+//       const phoneNumber = document.querySelector('[name="phone_number"]').value;
+
+//       const phoneNumberWithCode = `+${countryCode}${phoneNumber}`;
+      
+//       const requestData = {
+//           name: name,
+//           phone_number: phoneNumberWithCode
+//       };
+
+//       fetch('http://172.20.10.2:5000/make_call', {
+//           method: 'POST',
+//           headers: {
+//               'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify(requestData)
+//       })
+//       .then(response => response.json())
+//       .then(data => {
+//           console.log(data); // You can handle the response here
+//           window.location.href = 'call.html';
+//       })
+//       .catch(error => console.error('Error:', error));
+//   });
+// });
+
+
