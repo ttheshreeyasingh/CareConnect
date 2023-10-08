@@ -103,7 +103,7 @@ a {
   text-decoration: none;
 }
 
-img { height: auto; }
+img { height: 50%; }
 
 input,
 button {
@@ -672,7 +672,7 @@ body.nav-active { overflow: hidden; }
   border-radius: var(--radius-6);
 }
 
-.footer .logo { margin-block-end: 20px; }
+.footer .logo { margin-block-end: 10px; }
 
 .contact-item {
   display: flex;

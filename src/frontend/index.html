@@ -69,7 +69,7 @@
         <div class="navbar-top">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="1" height="1" alt="CareConnect home">
+            <img src="./assets/images/logo.svg" alt="CareConnect home">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -82,6 +82,9 @@
 
           <li class="navbar-item">
             <a href="#" class="navbar-link title-md">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">About</a>
           </li>
           <li class="navbar-item">
             <a href="#" class="navbar-link title-md">Contact</a>
@@ -138,41 +141,48 @@
 
             <p class="hero-subtitle has-before" data-reveal="left">Welcome To CareConnect</p>
 
-            <h1 class="headline-lg hero-title" data-reveal="left">
+            <h2 class="headline-lg hero-title" data-reveal="left">
               Get Diagnosed <br>
               Instantly.
-            </h1>
+            </h2>
 
             <div class="hero-card" data-reveal="left">
-
-              <p class="title-lg card-text">
-                Login
-              </p>
-
-              <div class="wrapper">
-
-                <div class="input-wrapper title-lg">
-                  <input type="text" name="location" placeholder="Locations" class="input-field">
-
-                  <ion-icon name="location"></ion-icon>
-                </div>
-
-                <button class="btn has-before">
-                  <ion-icon name="search"></ion-icon>
-
-                  <span class="span title-md">Start Call</span>
-                </button>
-
+              <p class="title-lg card-text">Login</p>
+            
+              <!-- Name Input -->
+              <div class="input-wrapper title-lg">
+                <input type="text" name="name" placeholder="Your Name" class="input-field">
+                <ion-icon name="person"></ion-icon>
               </div>
-
+            
+              <!-- Country Code and Phone Number in the same row -->
+              <div class="input-wrapper title-lg">
+                <!-- Country Code Select -->
+                <select name="country_code" class="input-field" style="width: 30%;">
+                  <option value="1">+1</option>
+                  <option value="44">+44</option>
+                  <option value="91">+91</option>
+                  <!-- Add more options as needed -->
+                </select>
+            
+                <!-- Phone Number Input -->
+                <input type="tel" name="phone_number" placeholder="Phone Number" class="input-field" pattern="[0-9]{10}" style="width: 70%;">
+                <ion-icon name="call"></ion-icon>
+              </div>
+            
+              <!-- Start Call Button -->
+              <button class="btn has-before start-call-button">
+                <ion-icon name="call"></ion-icon>
+                <span class="span title-md">Start Call</span>
+              </button>
             </div>
-
-          </div>
-
+            
+          
+<!-- 
           <figure class="hero-banner" data-reveal="right">
             <img src="./assets/images/hero-banner.png" width="600" height="537" loading="eager" alt="hero banner"
               class="w-100">
-          </figure>
+          </figure> -->
 
         </div>
       </section>

@@ -1,5 +1,6 @@
 from flask import Flask, request, make_response
 from plivo import plivoxml
+from flask_cors import CORS
 import plivo
 import os
 from dotenv import load_dotenv
@@ -8,7 +9,7 @@ from diagnosis import diagnosis_medic
 load_dotenv()
 
 app = Flask(__name__)
-
+CORS(app)
 # Access the variables from dotenv file
 auth_id = os.getenv("auth_id")
 auth_token = os.getenv("auth_token")
@@ -53,13 +54,15 @@ def answer_call():
     return response
 
 
-@app.route('/make_call', methods=['GET'])
+@app.route('/make_call', methods=['POST'])
 def make_outbound_call():
+    phone_number = request.json.get('phone_number')
+
     # Making an Outbound call
     response = client.calls.create(
         from_='441392342326',
-        to_='+918978843640',
-        answer_url='https://c9d6-106-221-176-87.ngrok.io/answer',
+        to_=phone_number,
+        answer_url='https://a77b-106-221-188-133.ngrok.io/answer',
         answer_method='POST'
     )
 
