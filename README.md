@@ -1,5 +1,7 @@
 # CareConnect
-Voice Based Virtual Health Assistant
+> Voice Based Virtual Health Assistant
+
+![Overview](./Docs/readme-util/demo.gif)
 
 
 ## Table of Contents
