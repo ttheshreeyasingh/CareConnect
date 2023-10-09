@@ -2,7 +2,7 @@
 <Response>
   <GetInput
     inputType="dtmf speech"
-    action="https://5ecd-2401-4900-4e23-f089-e538-827-ec7e-c25a.ngrok.io/handle_speech"
+    action="https://e178-2401-4900-4e22-4984-e538-827-ec7e-c25a.ngrok.io/handle_speech"
     method="POST"
     speechModel="default"
     hints="symptoms,condition, fever, body pain, headache, cough, cold, sore throat, runny nose, sneezing, fatigue, nausea, vomiting, diarrhea, abdominal pain, chest pain, shortness of breath, dizziness, fainting, back pain, joint pain, muscle pain"

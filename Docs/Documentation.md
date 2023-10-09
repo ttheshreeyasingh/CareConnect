@@ -1,8 +1,23 @@
-# CareConnect
-Voice Based Virtual Health Assistant
+# CareConnect - Voice Based Virtual Health Assistant
+
+> Shreeya Singh
+>
+> UG4 
+>
+> IIIT Hyderabad
+
+
+
+Link to Repo: [Github Repo Link](https://github.com/ttheshreeyasingh/CareConnect)
+
+Loom Link to Video: [Demo Video Link](https://www.loom.com/share/bc4c3bad8b4b4083b1c960f718d36402?sid=54661ef6-4459-4caa-ab68-27d4d8e201ec)
+
+Drive Link to Video: [Demo Video Drive Link](https://drive.google.com/file/d/1MfVFLhe50N5eT9xDGy9iOVZzYdG2ZjN6/view?usp=sharing)
+
 
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Overview](#project-overview)
 3. [Components](#components)
@@ -23,25 +38,25 @@ Voice Based Virtual Health Assistant
 
 ---
 
-## 1. Introduction <a id="introduction"></a>
+## 1. Introduction 
 Welcome to CareConnect, an innovative healthcare assistant leveraging Plivo APIs to provide accessible healthcare advice through phone calls. This document provides comprehensive information about the project, its components, installation instructions, and usage guidelines.
 
 ---
 
-## 2. Project Overview <a id="project-overview"></a>
+## 2. Project Overview 
 CareConnect aims to make healthcare advice easily accessible by utilizing Plivo's Voice API. It enables users to seek medical advice through phone calls, offering a seamless and convenient experience.
 
 ---
 
-## 3. Components <a id="components"></a>
+## 3. Components 
 
-### Frontend <a id="frontend"></a>
+### Frontend 
 The frontend is responsible for providing the user interface. It allows users to initiate a call, input their number which is then used to initiate an outbound call to the user.
 
-### Flask Application <a id="flask-application"></a>
+### Flask Application 
 The Flask application acts as the backend server. It handles the initiation of outbound calls, processes user input, interfaces with the Hugging Face API for symptom-to-disease prediction, and communicates with the Plivo API for voice interactions.
 
-### Plivo API Integration <a id="plivo-api-integration"></a>
+### Plivo API Integration 
 Plivo's Voice API is a crucial component of CareConnect. It facilitates voice interactions between users and the system, enabling seamless communication.
 
 It takes the speech input from the user and converts it to text using the Speech-to-Text API. The text is then used to predict a diagnosis based on the symptoms provided by the user. The diagnosis is then converted to speech using the Text-to-Speech API and communicated to the user.
@@ -51,13 +66,13 @@ Also used is the Plivo Number API, which is used to purchase a Plivo number for 
 
 ---
 
-## 4. Installation <a id="installation"></a>
+## 4. Installation 
 
 Install required dependencies using 
 ```
 pip install -r requirements.txt
 ```
-### Frontend Setup <a id="frontend-setup"></a>
+### Frontend Setup 
 1. Clone the repository: `git clone <repo-url>`
 2. Navigate to the `frontend` directory using the following command:
 ```
@@ -69,14 +84,14 @@ cd CareConnect/src/frontend
 python3 -m http.server
 ```
 
-### Flask Application Setup <a id="flask-application-setup"></a>
+### Flask Application Setup 
 1. Navigate to the `src` directory: 
 ```
 cd CareConnect/src
 ```
 2. Run the Flask application: `python main.py`.
 
-### Ngrok Setup <a id="ngrok-setup"></a>
+### Ngrok Setup 
 1. Download and install Ngrok from [https://ngrok.com/download](https://ngrok.com/download).
 2. Open a terminal and run Ngrok: `
 ```
@@ -86,7 +101,7 @@ ngrok http 5000
 
 ---
 
-## 5. Usage <a id="usage"></a>
+## 5. Usage 
 1. Access the frontend interface via `http://0.0.0.0:8000/index.html`.
 2. Click on "Start Call" to initiate a call.
 3. Follow the prompts to input your symptoms using voice.
@@ -94,35 +109,34 @@ ngrok http 5000
 
 ---
 
-## 6. Demo <a id="demo"></a>
+## 6. Demo 
 A live demonstration of the project is available at [Demo Video Link](https://www.loom.com/share/bc4c3bad8b4b4083b1c960f718d36402?sid=54661ef6-4459-4caa-ab68-27d4d8e201ec).
 
 ---
 
-## 7. Design Overview <a id="design-overview"></a>
+## 7. Design Overview 
 
-### Call Flow <a id="call-flow"></a>
+### Call Flow 
 1. Outbound call is initiated when the user clicks "Start Call".
 2. User provides symptom input via voice.
 3. Symptom-to-Disease model predicts a diagnosis using the speech input.
 
-### Symptom-to-Disease Model <a id="symptom-to-disease-model"></a>
+### Symptom-to-Disease Model 
 - The model is based on a Transformer-based encoder-decoder architecture.
 - Trained on a dataset of 100,000 symptom-disease pairs.
 - [Link To Model](https://huggingface.co/abhirajeshbhai/symptom-2-disease-net)
 ---
 
-## 8. Benefits <a id="benefits"></a>
+## 8. Benefits 
 - Quick and accessible healthcare advice.
 - Efficient processing of speech input.
 - Reliable diagnoses based on a comprehensive dataset.
 
 ---
 
-## 9. Future Scope <a id="future-scope"></a>
+## 9. Future Scope 
 - Integration with Plivo Messaging API for follow-up information.
 - Implementation of Call Recording for reference.
 - Call Forwarding to Specialist Doctors for advanced consultation.
 
 ---
-
