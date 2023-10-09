@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data); // You can handle the response here
+        console.log(data); 
         window.location.href = 'call.html'; // Navigate to call.html
       } else {
         throw new Error('Network response was not ok');
@@ -128,37 +128,46 @@ document.addEventListener('DOMContentLoaded', async function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const backButton = document.querySelector('.back-to-home-button');
+  console.log("Button found:", backButton);
 
+  backButton.addEventListener('click', function() {
+    console.log("Button clicked!");
+  });
+});
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const startCallButton = document.querySelector('.start-call-button');
-  
-//   startCallButton.addEventListener('click', function() {
-//       const name = document.querySelector('[name="name"]').value;
-//       const countryCode = document.querySelector('[name="country_code"]').value;
-//       const phoneNumber = document.querySelector('[name="phone_number"]').value;
+// document.addEventListener('DOMContentLoaded', async function() {
+//   const backButton = document.querySelector('.back-to-home-button');
+//   console.log("hi");
 
-//       const phoneNumberWithCode = `+${countryCode}${phoneNumber}`;
-      
-//       const requestData = {
-//           name: name,
-//           phone_number: phoneNumberWithCode
-//       };
+//   backButton.addEventListener('click', async function() {
+//     console.log("Button clicked!"); 
 
-//       fetch('http://172.20.10.2:5000/make_call', {
-//           method: 'POST',
-//           headers: {
-//               'Content-Type': 'application/json'
-//           },
-//           body: JSON.stringify(requestData)
-//       })
-//       .then(response => response.json())
-//       .then(data => {
-//           console.log(data); // You can handle the response here
-//           window.location.href = 'call.html';
-//       })
-//       .catch(error => console.error('Error:', error));
+//     try {
+//       const phone_number = "+918978843640"; 
+
+//       const response = await fetch('http://172.20.10.2:5000/make_sms', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ phone_number }) // Ensure phone_number is sent as an object
+//       });
+
+//       if (response.ok) {
+//         const data = await response.json();
+//         console.log(data); 
+//         window.location.href = 'index.html';
+//       } else {
+//         throw new Error('Network response was not ok');
+//       }
+//     } catch(error) {
+//       console.error('Error:', error);
+//     }
 //   });
 // });
 
 
+
+  

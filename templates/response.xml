@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <GetInput
-    inputType="speech"
-    action="https://90ec-218-185-248-66.ngrok.io/handle_speech"
+    inputType="dtmf speech"
+    action="https://5ecd-2401-4900-4e23-f089-e538-827-ec7e-c25a.ngrok.io/handle_speech"
     method="POST"
     speechModel="default"
     hints="symptoms,condition, fever, body pain, headache, cough, cold, sore throat, runny nose, sneezing, fatigue, nausea, vomiting, diarrhea, abdominal pain, chest pain, shortness of breath, dizziness, fainting, back pain, joint pain, muscle pain"
     language="en-IN"
     speechEndTimeout="2"
+    finishOnKey="#"
   >
     <Speak language = "en-US">
-    Hello! I'm your personal health assistant from careconnect. Please share the symptoms you're experiencing, and I'll do my best to help you.
+    Hello! I'm your personal health assistant from careconnect. Please share the symptoms you're experiencing, and I'll do my best to help you. 
+    <!-- Press the pound key (#) when you're done speaking. -->
     </Speak>
   </GetInput>
-  
 </Response>

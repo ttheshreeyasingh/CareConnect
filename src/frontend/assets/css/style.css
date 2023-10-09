@@ -1096,3 +1096,24 @@ body.nav-active { overflow: hidden; }
   .contact-item { margin-block-start: 0; }
 
 }
+
+
+/* Add this CSS to your existing styles or in a separate CSS file */
+.back-to-home {
+  margin-top: 30px; /* Adjust as needed for spacing */
+  text-align: center;
+}
+
+.back-to-home a {
+  text-decoration: none;
+  color: var(--primary-color); /* Adjust to match your website's color scheme */
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-home a ion-icon {
+  margin-right: 5px; /* Adjust for spacing between icon and text */
+}
+
